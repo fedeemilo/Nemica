@@ -32,7 +32,7 @@ import histograma1A from "./assets/images/cards/histograma1A.webp";
 import clip2 from "./assets/images/cards/Clip2.webp";
 import genealogia1A from "./assets/images/cards/Genealogia1A.webp";
 import testimonios from "./assets/images/cards/Testimonios.webp";
-import relaciones from "./assets/images/cards/relaciones.webp";
+import relaciones from "./assets/images/cards/Relaciones.webp";
 import genetica1A from "./assets/images/cards/genetica1A.webp";
 import Museum1B from "./assets/images/cards/Museum1B.webp";
 
