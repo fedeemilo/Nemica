@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme{
+    --color-lila: #9984D4;
+    --color-beige: #F7F3E3;
+    --color-purpura: #4F2BB5;
+    --color-gris: #36393B;
+    --color-naranja: #EE772F;
+    --color-white: #FFFFFF;
+    --color-crema: #F7F3E3
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
