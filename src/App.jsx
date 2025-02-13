@@ -27,7 +27,7 @@ import logo from "./assets/images/icons/logo.png";
 import titulonemica from "./assets/images/icons/titulonemica.png";
 
 //import Card
-import bio1A from "./assets/images/cards/bio1A.jpg";
+import bio1A from "./assets/images/cards/Bio1A.jpg";
 import histograma1A from "./assets/images/cards/histograma1A.webp";
 import clip2 from "./assets/images/cards/Clip2.webp";
 import genealogia1A from "./assets/images/cards/genealogia1A.webp";
