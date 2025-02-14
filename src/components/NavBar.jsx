@@ -11,7 +11,7 @@ const NavBar = ({ imgSrc, title }) => {
 
   return (
     <nav className="flex items-center justify-between p-4 bg-gris text-white">
-      <section className="flex justify-center items-center flex-grow">
+      <section className="flex justify-center items-center flex-grow lg:justify-start lg:pl-8">
         <div className="mr-2">
           <img src={imgSrc} alt="Icono" className="h-12 w-12" />
         </div>

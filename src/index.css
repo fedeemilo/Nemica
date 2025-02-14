@@ -7,7 +7,9 @@
     --color-gris: #36393B;
     --color-naranja: #EE772F;
     --color-white: #FFFFFF;
-    --color-crema: #F7F3E3
+    --color-crema: #F7F3E3;
+    --color-grisClaro: #E5E5E5;
+    --color-grisMedio: #C0C1C2;
 }
 @keyframes scroll{
     0%{
