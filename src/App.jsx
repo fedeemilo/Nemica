@@ -270,7 +270,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="bg-gris text-beige text-2xl p-5 font-medium pb-10 | lg:text-xl text-center">
+      <div className="bg-gris text-beige text-xl p-5 font-medium pb-10 | lg:text-xl text-center">
         <Line imgSrc={logo} description="LA EXPERIENCIA INOLVIDABLE" />
       </div>
 
