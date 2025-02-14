@@ -270,7 +270,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="bg-gris text-beige text-2xl p-5 font-bold pb-10 | lg:text-2xl">
+      <div className="bg-gris text-beige text-2xl p-5 font-medium pb-10 | lg:text-xl text-center">
         <Line imgSrc={logo} description="LA EXPERIENCIA INOLVIDABLE" />
       </div>
 
@@ -341,7 +341,8 @@ export default function App() {
       </div>
 
       <div className="relative overflow-hidden ">       
-         <section className="hidden lg:block absolute text-xl lg:bottom-8 lg:left-170 text-beige font-bold ">
+         <section className="hidden lg:block absolute text-xl text-beige font-bold 
+                    left-1/2 bottom-8 transform -translate-x-1/2">
           <Line imgSrc={logo} description="VIVIR ES TRASCENDER" />
         </section>
         <Hero
