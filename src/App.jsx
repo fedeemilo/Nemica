@@ -65,9 +65,8 @@ export default function App() {
       </div>
 
       <div className="relative w-full overflow-hidden">
-        <div className="absolute w-[500px] h-[500px]">
-                
-        </div>
+        
+        <div className="absolute w-[500px] h-[500px]"></div>
 
         <Hero
           imgSrcMobile={principal1mobile}
@@ -262,42 +261,35 @@ export default function App() {
         {/* Aquí podrías agregar controles personalizados (flechas, dots, etc.) si lo deseas */}
       </section>
 
-      <div className="bg-gris text-beige text-3xl p-5 font-bold py-10 lg:pt-20">
+      <div className="bg-gris text-white text-2xl p-5 font-bold lg:pt-20">
         <h1>RESGUARDA DE FORMA SEGURA Y PERSONAL ESE TESORO</h1>
       </div>
       <div
-        className="flex flex-col items-center justify-center text-center p-6 bg-gris text-beige text-xl font-medium tracking-wide leading-6
-                lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-8 lg:py-5"
+        className="flex flex-col items-center justify-center text-center p-6 bg-gris text-white text-xl font-medium tracking-wide 
+            lg:grid lg:grid-cols-3 lg:gap-7 lg:pt-20 lg:px-60 "
       >
-        <Hero
-          imgSrcMobile={pc}
-          imgSrcDesktop={pc}
-          className="lg:row-start-1 lg:col-start-1"
-        />
-        <div className="text-center p-6 lg:row-start-2 lg:col-start-1 lg:text-xl">
-          <h2>
+        {/* Contenedor 1 */}
+        <div className="flex flex-col items-center text-center lg:pr-20">
+          <Hero imgSrcMobile={pc} imgSrcDesktop={pc} />
+          <h2 className="mt-5 pb-10 w-[320px] lg:w-[400px]">
             Un lugar único, para tener y ver de una manera clara, atractiva y
             simple tu legado completo.
           </h2>
         </div>
-        <Hero
-          imgSrcMobile={link}
-          imgSrcDesktop={link}
-          className="lg:row-start-1 lg:col-start-2"
-        />
-        <div className="text-center p-6 lg:row-start-2 lg:col-start-2 lg:text-xl">
-          <h2>
+
+        {/* Contenedor 2 */}
+        <div className="flex flex-col items-center text-center">
+          <Hero imgSrcMobile={link} imgSrcDesktop={link} />
+          <h2 className="mt-5 pb-10 w-[400px] lg:w-[400px] lg:pb-13">
             Un espacio de fácil y rápido acceso para que esté por siempre a la
             mano de las generaciones por vivir.
           </h2>
         </div>
-        <Hero
-          imgSrcMobile={qrcode}
-          imgSrcDesktop={qrcode}
-          className="lg:row-start-1 lg:col-start-3"
-        />
-        <div className="text-center p-6 lg:row-start-2 lg:col-start-3 lg:text-xl lg:p-2 lg:pb-17">
-          <h2>
+
+        {/* Contenedor 3 */}
+        <div className="flex flex-col items-center text-center">
+          <Hero imgSrcMobile={qrcode} imgSrcDesktop={qrcode} />
+          <h2 className="mt-5 pb-10 w-[300px] lg:w-[300px]">
             Una estructura flexible para compartirlo de la forma que quieras y
             con quien quieras.
           </h2>
