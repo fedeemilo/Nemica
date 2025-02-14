@@ -1,5 +1,6 @@
-//importacion de componentes
+import useEmblaCarousel from "embla-carousel-react";
 
+//importacion de componentes
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
@@ -51,6 +52,7 @@ import genetica1A from "./assets/images/cards/genetica1A.webp";
 import Museum1B from "./assets/images/cards/Museum1B.webp";
 
 export default function App() {
+  const [emblaRef] = useEmblaCarousel({ loop: false });
   return (
     <div className="bg-grisMedio">
       <div>
@@ -98,139 +100,164 @@ export default function App() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-0">
-  {/* Hero 1 */}
-  <div className="relative overflow-hidden lg:[grid-column:1] lg:[grid-row:1] -mb-8 lg:mb-0">
-    <Hero
-      imgSrcMobile={target1Amobile}
-      imgSrcDesktop={target1Adesktop}
-      className="w-full h-full object-cover"
-    />
-    <div
-      className="text-left absolute drop-shadow-xl bottom-4 left-4 p-4 text-white text-4xl font-extrabold lg:text-4xl lg:bottom-10 lg:left-10 lg:p-4"
-      style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
-    >
-      <span className="block md:inline"> ¡TU VIDA MERECE</span>
-      <span className="block"> SER CONTADA!</span>
-    </div>
-  </div>
-  {/* Header 1 */}
-  <div className="bg-lila text-white p-2 lg:[grid-column:1] lg:[grid-row:2]">
-    <div className="p-6 pt-15 lg:p-15">
-      <Header
-        heading={
-          <div className="text-2xl font-bold text-left lg:px-9">
-            Somos el apoyo y guía necesario para recrear tu historia.
+        {/* Hero 1 */}
+        <div className="relative overflow-hidden lg:[grid-column:1] lg:[grid-row:1] -mb-8 lg:mb-0">
+          <Hero
+            imgSrcMobile={target1Amobile}
+            imgSrcDesktop={target1Adesktop}
+            className="w-full h-full object-cover"
+          />
+          <div
+            className="text-left absolute drop-shadow-xl bottom-4 left-4 p-4 text-white text-4xl font-extrabold lg:text-4xl lg:bottom-10 lg:left-10 lg:p-4"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
+          >
+            <span className="block md:inline"> ¡TU VIDA MERECE</span>
+            <span className="block"> SER CONTADA!</span>
           </div>
-        }
-        description={
-          <div className="text-left text-xl font-extralight py-4 lg:px-9">
-            Te ayudamos a clarificar y resignificar el camino propio.
-            Mucha gente cree que la tarea es titánica. Por eso nunca
-            empiezan. ¡Ahora vos podes!
+        </div>
+        {/* Header 1 */}
+        <div className="bg-lila text-white p-2 lg:[grid-column:1] lg:[grid-row:2]">
+          <div className="p-6 pt-15 lg:p-15">
+            <Header
+              heading={
+                <div className="text-2xl font-bold text-left lg:px-9">
+                  Somos el apoyo y guía necesario para recrear tu historia.
+                </div>
+              }
+              description={
+                <div className="text-left text-xl font-extralight py-4 lg:px-9">
+                  Te ayudamos a clarificar y resignificar el camino propio.
+                  Mucha gente cree que la tarea es titánica. Por eso nunca
+                  empiezan. ¡Ahora vos podes!
+                </div>
+              }
+            />
           </div>
-        }
-      />
-    </div>
-  </div>
-  {/* Hero 2 */}
-  <div className="relative overflow-hidden lg:[grid-column:2] lg:[grid-row:1] -mb-8 lg:mb-0">
-    <Hero
-      imgSrcMobile={caballomobile}
-      imgSrcDesktop={caballodesktop}
-      className="w-full h-full object-cover"
-    />
-    <div
-      className="absolute bottom-5 left-3 p-4 text-left text-white text-4xl font-extrabold drop-shadow-lg lg:text-4xl lg:bottom-10 lg:left-18 lg:p-4"
-      style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
-    >
-      <span className="block md:inline"> ¡EL HOMENAJE AL</span>
-      <span className="block"> SER MAS QUERIDO!</span>
-    </div>
-  </div>
-  {/* Header 2 */}
-  <div className="bg-lila text-white p-0 lg:[grid-column:2] lg:[grid-row:2]">
-    <div className="p-8 pt-18 lg:p-15">
-      <Header
-        heading={
-          <div className="text-2xl font-bold text-left lg:px-9">
-            Pone en valor el legado de quien amas.
+        </div>
+        {/* Hero 2 */}
+        <div className="relative overflow-hidden lg:[grid-column:2] lg:[grid-row:1] -mb-8 lg:mb-0">
+          <Hero
+            imgSrcMobile={caballomobile}
+            imgSrcDesktop={caballodesktop}
+            className="w-full h-full object-cover"
+          />
+          <div
+            className="absolute bottom-5 left-3 p-4 text-left text-white text-4xl font-extrabold drop-shadow-lg lg:text-4xl lg:bottom-10 lg:left-18 lg:p-4"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
+          >
+            <span className="block md:inline"> ¡EL HOMENAJE AL</span>
+            <span className="block"> SER MAS QUERIDO!</span>
           </div>
-        }
-        description={
-          <div className="text-left text-xl font-extralight py-4 lg:px-9">
-            Lo que le gustaba hacer, con quien le gustaba estar, lugares a
-            donde le encantaba ir, momentos que disfrutaba vivir y lo que
-            caracterizaba su persona: sus cualidades, sus valores, su
-            carácter, sus pasiones. Su sello. Recordalo y honralo para
-            siempre!
+        </div>
+        {/* Header 2 */}
+        <div className="bg-lila text-white p-0 lg:[grid-column:2] lg:[grid-row:2]">
+          <div className="p-8 pt-18 lg:p-15">
+            <Header
+              heading={
+                <div className="text-2xl font-bold text-left lg:px-9">
+                  Pone en valor el legado de quien amas.
+                </div>
+              }
+              description={
+                <div className="text-left text-xl font-extralight py-4 lg:px-9">
+                  Lo que le gustaba hacer, con quien le gustaba estar, lugares a
+                  donde le encantaba ir, momentos que disfrutaba vivir y lo que
+                  caracterizaba su persona: sus cualidades, sus valores, su
+                  carácter, sus pasiones. Su sello. Recordalo y honralo para
+                  siempre!
+                </div>
+              }
+            />
           </div>
-        }
-      />
-    </div>
-  </div>
-</div>
-
+        </div>
+      </div>
 
       <div className="font-bold text-2xl bg-lila p-5 border-lila text-black">
         <Line imgSrc={logo} description="NO OLVIDES TUS RAÍCES" />
       </div>
-
-      <div className="grid grid-flow-col auto-cols-[minmax(300px,1fr)] gap-6 p-6 overflow-hidden bg-gradient-to-b from-lila to-gris">
-        <Card
-          title="Resumen Biográfico"
-          imgSrc={bio1A}
-          h1="¡De generación en generación!"
-          description="Armá la línea familiar, para conocer los protagonistas de una generación a otra y descubrir en la transmisión de esa herencia del pasado, tradiciones arraigadas que dan muchas veces sentido al hoy y al mañana."
-        />
-        <Card
-          title="Histograma"
-          imgSrc={histograma1A}
-          h1="¡Los hechos más significativos!"
-          description="Destacá los hitos más importantes que marcaron el camino construido, y mira cronológicamente esos logros y eventos del proyecto de vida que fueron únicos."
-        />
-        <Card
-          title="Clip de Vida"
-          imgSrc={clip2}
-          h1="¡Esos buenos momentos vividos!"
-          description="Transmití esas experiencias que llenaron el corazón, que son vivencias que emocionan y que reviven momentos que entusiasman."
-        />
-
-        <Card
-          title="ÁRBOL GENEALÓGICO"
-          imgSrc={genealogia1A}
-          h1="¡De generación en generación!"
-          description="Armá la línea familiar, para conocer los protagonistas de una generación a otra y descubrir en la transmisión de esa herencia del pasado, tradiciones arraigadas que dan muchas veces sentido al hoy y al mañana."
-        />
-        <Card
-          title="TESTIMONIOS"
-          imgSrc={testimonios}
-          h1="¡Esos relatos que nos pintan tal cual somos!"
-          description="Recreá y captá desde la mirada y experiencia del círculo íntimo esa esencia personal, generando un retrato con los rasgos característicos."
-        />
-        <Card
-          title="CÏRCULOS DE RELACIONES"
-          imgSrc={relaciones}
-          h1="¡Esos vínculos construidos!"
-          description="Mostrá las relaciones con familiares y amigos que marcaron e influenciaron el desarrollo y crecimiento personal."
-        />
-        <Card
-          title="SÍNTESIS GENÉTICA"
-          imgSrc={genetica1A}
-          h1="¡De tal palo tal astilla!"
-          description="Dejá claro esos rasgos tradicionales que inevitablemente se heredan, que son parte de la identidad y que seguramente se transmitan a las siguientes generaciones."
-        />
-        <Card
-          title="MUSEUM"
-          imgSrc={Museum1B}
-          h1="¡Olvidate del altillo!"
-          description="Que mejor que tener ese espacio propio donde encontrar todo de forma rápida y ágil, y mediante una experiencia visual increíble que se puede disfrutar a cada momento."
-        />
-      </div>
+      <section id="servicios">
+        {/* Contenedor principal del carrusel */}
+        <div className="embla overflow-hidden bg-gradient-to-b from-lila to-gris p-6">
+          {/* Viewport de Embla: se asigna el ref para controlar el carrusel */}
+          <div className="embla__viewport" ref={emblaRef}>
+            {/* Contenedor de slides: usamos flex para alinear horizontalmente */}
+            <div className="embla__container flex gap-6">
+              {/* Cada slide contiene una Card. 
+                La clase "flex-shrink-0" evita que el slide se encoja,
+                y definimos un ancho mínimo para cada slide */}
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
+                <Card
+                  title="Resumen Biográfico"
+                  imgSrc={bio1A}
+                  h1="¡De generación en generación!"
+                  description="Armá la línea familiar, para conocer los protagonistas de una generación a otra y descubrir en la transmisión de esa herencia del pasado, tradiciones arraigadas que dan muchas veces sentido al hoy y al mañana."
+                />
+              </div>
+              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+                <Card
+                  title="Histograma"
+                  imgSrc={histograma1A}
+                  h1="¡Los hechos más significativos!"
+                  description="Destacá los hitos más importantes que marcaron el camino construido, y mira cronológicamente esos logros y eventos del proyecto de vida que fueron únicos."
+                />
+              </div>
+              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+                <Card
+                  title="Clip de Vida"
+                  imgSrc={clip2}
+                  h1="¡Esos buenos momentos vividos!"
+                  description="Transmití esas experiencias que llenaron el corazón, que son vivencias que emocionan y que reviven momentos que entusiasman."
+                />
+              </div>
+              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+                <Card
+                  title="ÁRBOL GENEALÓGICO"
+                  imgSrc={genealogia1A}
+                  h1="¡De generación en generación!"
+                  description="Armá la línea familiar, para conocer los protagonistas de una generación a otra y descubrir en la transmisión de esa herencia del pasado, tradiciones arraigadas que dan muchas veces sentido al hoy y al mañana."
+                />
+              </div>
+              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+                <Card
+                  title="TESTIMONIOS"
+                  imgSrc={testimonios}
+                  h1="¡Esos relatos que nos pintan tal cual somos!"
+                  description="Recreá y captá desde la mirada y experiencia del círculo íntimo esa esencia personal, generando un retrato con los rasgos característicos."
+                />
+              </div>
+              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+                <Card
+                  title="CÍRCULOS DE RELACIONES"
+                  imgSrc={relaciones}
+                  h1="¡Esos vínculos construidos!"
+                  description="Mostrá las relaciones con familiares y amigos que marcaron e influenciaron el desarrollo y crecimiento personal."
+                />
+              </div>
+              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+                <Card
+                  title="SÍNTESIS GENÉTICA"
+                  imgSrc={genetica1A}
+                  h1="¡De tal palo tal astilla!"
+                  description="Dejá claro esos rasgos tradicionales que inevitablemente se heredan, que son parte de la identidad y que seguramente se transmitan a las siguientes generaciones."
+                />
+              </div>
+              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+                <Card
+                  title="MUSEUM"
+                  imgSrc={Museum1B}
+                  h1="¡Olvidate del altillo!"
+                  description="Que mejor que tener ese espacio propio donde encontrar todo de forma rápida y ágil, y mediante una experiencia visual increíble que se puede disfrutar a cada momento."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Aquí podrías agregar controles personalizados (flechas, dots, etc.) si lo deseas */}
+      </section>
 
       <div className="bg-gris text-beige text-3xl p-5 font-bold py-10 lg:pt-20">
         <h1>RESGUARDA DE FORMA SEGURA Y PERSONAL ESE TESORO</h1>
       </div>
-
       <div
         className="flex flex-col items-center justify-center text-center p-6 bg-gris text-beige text-xl font-medium tracking-wide leading-6
                 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-8 lg:py-5"
@@ -340,9 +367,11 @@ export default function App() {
         </section>
       </div>
 
-      <div className="relative overflow-hidden ">       
-         <section className="hidden lg:block absolute text-xl text-beige font-bold 
-                    left-1/2 bottom-8 transform -translate-x-1/2">
+      <div className="relative overflow-hidden ">
+        <section
+          className="hidden lg:block absolute text-xl text-beige font-bold 
+                    left-1/2 bottom-8 transform -translate-x-1/2"
+        >
           <Line imgSrc={logo} description="VIVIR ES TRASCENDER" />
         </section>
         <Hero
@@ -351,10 +380,15 @@ export default function App() {
         />
         <div
           className="absolute top-8 left-3 p-3 text-white text-3xl font-bold drop-shadow-lg text-left tracking-wide leading-12
-        lg:top-25 lg:left-20 lg:w-[800px]" style={{ textShadow: ":2px 2px 4px rgba(0,0,0,0.7)" }}
+        lg:top-25 lg:left-20 lg:w-[800px]"
+          style={{ textShadow: ":2px 2px 4px rgba(0,0,0,0.7)" }}
         >
-          <span className="block md:inline lg:text-4xl lg:text-purpura">MAS ALLÁ DE LA </span>
-          <span className="block md:inline lg:text-4xl lg:text-purpura">HERENCIA MATERIAL</span>
+          <span className="block md:inline lg:text-4xl lg:text-purpura">
+            MAS ALLÁ DE LA{" "}
+          </span>
+          <span className="block md:inline lg:text-4xl lg:text-purpura">
+            HERENCIA MATERIAL
+          </span>
           <span className="block font-normal py-2 text-2xl lg:text-3xl tracking-wide leading-8 pl-0 pr-15 lg:w-700px] lg:text-purpura">
             Ahora tenés la oportunidad de dejar plasmado ese patrimonio
             intangible e inmaterial muy valioso que pocos conservan
@@ -365,7 +399,9 @@ export default function App() {
         <Form />
       </div>
       <div>
-        <Footer />
+        <section id="contactenos">
+          <Footer />
+        </section>
       </div>
     </div>
   );
