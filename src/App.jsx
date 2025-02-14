@@ -114,7 +114,7 @@ export default function App() {
             className="w-full h-full object-cover"
           />
           <div
-            className="text-left absolute drop-shadow-xl bottom-4 left-4 p-4 text-white text-4xl font-extrabold lg:text-4xl lg:bottom-10 lg:left-10 lg:p-4"
+            className="text-left absolute drop-shadow-xl bottom-4 left-4 p-4 text-white text-4xl font-extrabold lg:text-4xl lg:bottom-10 lg:left-20 lg:p-4"
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
           >
             <span className="block md:inline"> ¡TU VIDA MERECE</span>
