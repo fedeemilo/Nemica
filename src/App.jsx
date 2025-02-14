@@ -285,7 +285,7 @@ export default function App() {
         <Hero imgSrcMobile={Nemicamobile} imgSrcDesktop={Nemicadesktop} />
 
         {/* Header para Desktop: se muestra solo en md y superiores */}
-        <div className="hidden md:block absolute top-25 right-25 lg:w-[800px] w-full p-4 bg-crema bg lg:p-9 ">
+        <div className="hidden md:block absolute top-25 right-25 lg:w-[800px] w-full p-4 bg-crema/75 bg lg:p-9 ">
           <Header
             heading={
               <div className="text-2xl font-normal font-sans text-left p-3 text-purpura">
