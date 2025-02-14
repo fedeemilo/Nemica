@@ -18,13 +18,15 @@ import target1Amobile from "./assets/images/mobile/target1Amobile.webp";
 import caballomobile from "./assets/images/mobile/caballomobile.webp";
 import Nemicamobile from "./assets/images/mobile/Nemicamobile.webp";
 import intangible2mobile from "./assets/images/mobile/intangible2mobile.webp";
+import bgMobileIcon from "./assets/images/mobile/bg-mobileIcon.webp";
 
 //import de imagenes desktop
 import principal1desktop from "./assets/images/principal1desktop.webp";
-import target1Adesktop from "./assets/images/target1Adesktop.jpg";
+import target1Adesktop from "./assets/images/target1Adesktop.webp";
 import caballodesktop from "./assets/images/caballodesktop.webp";
 import Nemicadesktop from "./assets/images/Nemicadesktop.webp";
 import intangible2desktop from "./assets/images/intangible2desktop.webp";
+import bgDesktopIcon from "./assets/images/bg-desktopIcon.webp";
 
 //import icons
 import pc from "./assets/images/icons/pc.png";
@@ -53,6 +55,7 @@ import Museum1B from "./assets/images/cards/Museum1B.webp";
 
 export default function App() {
   const [emblaRef] = useEmblaCarousel({ loop: false });
+
   return (
     <div className="bg-grisMedio">
       <div>
@@ -62,6 +65,10 @@ export default function App() {
       </div>
 
       <div className="relative w-full overflow-hidden">
+        <div className="absolute w-[500px] h-[500px]">
+                
+        </div>
+
         <Hero
           imgSrcMobile={principal1mobile}
           imgSrcDesktop={principal1desktop}
@@ -81,13 +88,13 @@ export default function App() {
       <div className="bg-crema text-purpura p-6 py-6 | lg:p-10 lg:px-15">
         <Header
           heading={
-            <div className="leading-10 text-3xl font-bold font-sans text-left tracking-wider | lg:px-50 lg:text-center lg:text-5xl lg:leading-15">
+            <div className="leading-10 text-3xl font-bold font-sans text-left tracking-wider | lg:px-40 lg:text-center lg:text-5xl lg:leading-15">
               Transmití de generación en generación la tradición familiar y tu
               legado.
             </div>
           }
           description={
-            <div className="text-purpura mt-2 font-normal leading-8 text-left tracking-wider text-2xl py-4 | lg:text-purpura lg:text-3xl lg:px-30 lg:leading-10 lg:text-center lg:font-normal">
+            <div className="text-purpura mt-2 font-normal leading-8 text-left tracking-wider text-2xl py-4 | lg:text-purpura lg:text-3xl lg:px-50 lg:leading-10 lg:text-center lg:font-normal">
               Concretiza y deja marcada la huella que podrá ser una fuente de
               inspiración y un faro para otros, para que quede en los corazones
               y las mentes de quienes amas.
@@ -95,7 +102,7 @@ export default function App() {
           }
         />
       </div>
-      <div className="font-bold text-2xl pb-8 | lg:text-3xl lg:p-15 bg-crema">
+      <div className="font-bold text-2xl pb-8 | lg:text-3xl lg:pb-10 bg-crema">
         <Line imgSrc={logo} description="EL LEGADO IMBORRABLE" />
       </div>
 
@@ -117,7 +124,7 @@ export default function App() {
         </div>
         {/* Header 1 */}
         <div className="bg-lila text-white p-2 lg:[grid-column:1] lg:[grid-row:2]">
-          <div className="p-6 pt-15 lg:p-15">
+          <div className="p-6 pt-15 lg:p-13">
             <Header
               heading={
                 <div className="text-2xl font-bold text-left lg:px-9">
@@ -125,7 +132,7 @@ export default function App() {
                 </div>
               }
               description={
-                <div className="text-left text-xl font-extralight py-4 lg:px-9">
+                <div className="text-left text-xl font-extralight py-3 lg:px-9 lg:w-[570px]">
                   Te ayudamos a clarificar y resignificar el camino propio.
                   Mucha gente cree que la tarea es titánica. Por eso nunca
                   empiezan. ¡Ahora vos podes!
@@ -159,7 +166,7 @@ export default function App() {
                 </div>
               }
               description={
-                <div className="text-left text-xl font-extralight py-4 lg:px-9">
+                <div className="text-left text-xl font-extralight py-4 lg:px-9 lg:w-[570px]">
                   Lo que le gustaba hacer, con quien le gustaba estar, lugares a
                   donde le encantaba ir, momentos que disfrutaba vivir y lo que
                   caracterizaba su persona: sus cualidades, sus valores, su
@@ -172,7 +179,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="font-bold text-2xl bg-lila p-5 border-lila text-black">
+      <div className="font-bold text-2xl bg-lila p-5 border-lila text-white">
         <Line imgSrc={logo} description="NO OLVIDES TUS RAÍCES" />
       </div>
       <section id="servicios">
@@ -354,17 +361,13 @@ export default function App() {
         />
       </div>
 
-      <div className="App overflow-hidden bg-amber-400">
-        <section className="grid grid-flow-col auto-cols-[minmax(100px,auto)] gap-6">
-          <Icons imgSrcDesktop={one} />
-          <Icons imgSrcDesktop={two} />
-          <Icons imgSrcDesktop={three} />
-          <Icons imgSrcDesktop={four} />
-          <Icons imgSrcDesktop={five} />
-          <Icons imgSrcDesktop={six} />
-          <Icons imgSrcDesktop={seven} />
-          <Icons imgSrcDesktop={eight} />
-        </section>
+      <div>
+        <Icons
+          BackgroundWithIcons
+          bgDesktopIcon={bgDesktopIcon}
+          bgMobileIcon={bgMobileIcon}
+          icons={[one, two, three, four, five, six, seven, eight]}
+        />
       </div>
 
       <div className="relative overflow-hidden ">

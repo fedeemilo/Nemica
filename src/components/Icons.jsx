@@ -1,25 +1,23 @@
-import PropTypes from "prop-types";
-
-export default function Icons({ imgSrcMobile, imgSrcDesktop,  }) {
-  return (
-    <section>
-      <div className=" grid-flow-col auto-cols-[minmax(300px,1fr)] gap-3 p-4 overflow-hidden">
-        {/* Imagen para Desktop */}
-        <img
-          src={imgSrcDesktop}
-          className=""
-        />
-        {/* Imagen para Mobile */}
-        <img
-          src={imgSrcMobile}
-          className=""
-        />
+export default function BackgroundWithIcons({ bgDesktopIcon, bgMobileIcon, icons }) {
+    return (
+      <div className="relative w-full h-[140px] md:h-[150px] lg:h-[230px] flex justify-center items-center">
+        {/* Imagen de fondo con cambio entre desktop y mobile */}
+        <picture className="absolute top-0 left-0 w-full h-full">
+          <source srcSet={bgDesktopIcon} media="(min-width: 768px)" />
+          <img
+            src={bgMobileIcon}
+            alt="Fondo"
+            className="w-full h-full object-cover md:clip-auto clip-path-mobile"
+          />
+        </picture>
+  
+        {/* Contenedor de iconos alineados horizontalmente */}
+        <div className="relative lg:right-1 right-10 flex gap-4 lg:gap-20 z-10">
+          {icons.map((icon, index) => (
+            <img key={index} src={icon} alt={`Icono ${index}`} className="w-25 h-25 lg:w-40 lg:h-40" />
+          ))}
+        </div>
       </div>
-    </section>
-  );
-}
-
-Icons.propTypes = {
-  imgSrcMobile: PropTypes.string.isRequired, // Imagen para mobile
-  imgSrcDesktop: PropTypes.string.isRequired, // Imagen para desktop
-};
+    );
+  }
+  
