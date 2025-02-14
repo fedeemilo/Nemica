@@ -148,7 +148,7 @@ export default function App() {
             className="w-full h-full object-cover"
           />
           <div
-            className="absolute bottom-5 left-3 p-4 text-left text-white text-4xl font-extrabold drop-shadow-lg lg:text-4xl lg:bottom-10 lg:left-18 lg:p-4"
+            className="absolute bottom-5 left-3 p-4 text-left text-white text-4xl font-extrabold drop-shadow-lg lg:text-4xl lg:bottom-10 lg:left-20 lg:p-4"
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
           >
             <span className="block md:inline"> ¡EL HOMENAJE AL</span>
