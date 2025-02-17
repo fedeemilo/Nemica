@@ -9,7 +9,11 @@ import Card from "./components/Card";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Icons from "./components/Icons";
+import HeadingImage from "./components/HeadingImage";
 import "./index.css";
+
+//import videos
+import video from "./assets/videos/video.webm";
 
 //import de imagenes mobile
 
@@ -21,7 +25,6 @@ import intangible2mobile from "./assets/images/mobile/intangible2mobile.webp";
 import bgMobileIcon from "./assets/images/mobile/bg-mobileIcon.webp";
 
 //import de imagenes desktop
-import principal1desktop from "./assets/images/principal1desktop.webp";
 import target1Adesktop from "./assets/images/target1Adesktop.webp";
 import caballodesktop from "./assets/images/caballodesktop.webp";
 import Nemicadesktop from "./assets/images/Nemicadesktop.webp";
@@ -65,17 +68,16 @@ export default function App() {
       </div>
 
       <div className="relative w-full overflow-hidden">
-        
         <div className="absolute w-[500px] h-[500px]"></div>
 
-        <Hero
+        <HeadingImage
           imgSrcMobile={principal1mobile}
-          imgSrcDesktop={principal1desktop}
+          videoSrc={video}
           alt="imagen principal"
           className="absolute w-full h-full object-cover scale-[1.5] translate-y-[-15%] md:scale-100 md:translate-y-0"
         />
         <div
-          className="absolute top-25 left-0 p-4 text-white text-7xl font-extrabold drop-shadow-lg text-left tracking-wide leading-20 | lg:text-8xl lg:left-25 lg:top-50 "
+          className="absolute top-25 left-0 p-4 text-white text-7xl font-extrabold drop-shadow-lg text-left tracking-wide leading-20 | lg:text-8xl lg:left-260 lg:top-45 lg:text-gris lg:drop-shadow-none"
           style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.7)" }}
         >
           <span className="block md:inline ">DEJÁ</span>
