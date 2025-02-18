@@ -1,4 +1,8 @@
-import useEmblaCarousel from "embla-carousel-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
 //importacion de componentes
 import NavBar from "./components/NavBar";
@@ -10,6 +14,8 @@ import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Icons from "./components/Icons";
 import HeadingImage from "./components/HeadingImage";
+
+//import de estilos
 import "./index.css";
 
 //import videos
@@ -57,8 +63,6 @@ import genetica1A from "./assets/images/cards/genetica1A.webp";
 import Museum1B from "./assets/images/cards/Museum1B.webp";
 
 export default function App() {
-  const [emblaRef] = useEmblaCarousel({ loop: false });
-
   return (
     <div className="bg-grisMedio">
       <div>
@@ -183,41 +187,57 @@ export default function App() {
       <div className="font-bold text-2xl bg-lila p-5 border-lila text-white">
         <Line imgSrc={logo} description="NO OLVIDES TUS RAÍCES" />
       </div>
-      <section id="servicios">
-        {/* Contenedor principal del carrusel */}
-        <div className="embla overflow-hidden bg-gradient-to-b from-lila to-gris p-6">
-          {/* Viewport de Embla: se asigna el ref para controlar el carrusel */}
-          <div className="embla__viewport" ref={emblaRef}>
-            {/* Contenedor de slides: usamos flex para alinear horizontalmente */}
-            <div className="embla__container flex gap-6">
-              {/* Cada slide contiene una Card. 
-                La clase "flex-shrink-0" evita que el slide se encoja,
-                y definimos un ancho mínimo para cada slide */}
+      <div className="py-10 bg-gradient-to-b from-lila to-gris">
+        <div className="max-w-[800px] lg:max-w-full mx-auto overflow-visible" >
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper"
+          >
+
+            <SwiperSlide>
               <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
-                  title="Resumen Biográfico"
+                  title="RESUMEN BIOGRÁFICO"
                   imgSrc={bio1A}
-                  h1="¡De generación en generación!"
-                  description="Armá la línea familiar, para conocer los protagonistas de una generación a otra y descubrir en la transmisión de esa herencia del pasado, tradiciones arraigadas que dan muchas veces sentido al hoy y al mañana."
+                  h1="¡El Pergamino de vida!"
+                  description="Recorre, describí y sintetiza la trayectoria, expresando el significado que tuvo para que nuevas y futuras generaciones tengan algo valioso guardado para siempre."
                 />
               </div>
-              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
-                  title="Histograma"
+                  title="HISTOGRAMA"
                   imgSrc={histograma1A}
                   h1="¡Los hechos más significativos!"
                   description="Destacá los hitos más importantes que marcaron el camino construido, y mira cronológicamente esos logros y eventos del proyecto de vida que fueron únicos."
                 />
               </div>
-              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
-                  title="Clip de Vida"
+                  title="CLIP DE VIDA"
                   imgSrc={clip2}
                   h1="¡Esos buenos momentos vividos!"
                   description="Transmití esas experiencias que llenaron el corazón, que son vivencias que emocionan y que reviven momentos que entusiasman."
                 />
               </div>
-              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
                   title="ÁRBOL GENEALÓGICO"
                   imgSrc={genealogia1A}
@@ -225,7 +245,9 @@ export default function App() {
                   description="Armá la línea familiar, para conocer los protagonistas de una generación a otra y descubrir en la transmisión de esa herencia del pasado, tradiciones arraigadas que dan muchas veces sentido al hoy y al mañana."
                 />
               </div>
-              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
                   title="TESTIMONIOS"
                   imgSrc={testimonios}
@@ -233,15 +255,19 @@ export default function App() {
                   description="Recreá y captá desde la mirada y experiencia del círculo íntimo esa esencia personal, generando un retrato con los rasgos característicos."
                 />
               </div>
-              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
-                  title="CÍRCULOS DE RELACIONES"
+                  title="CIRCULO DE RELACIONES"
                   imgSrc={relaciones}
                   h1="¡Esos vínculos construidos!"
                   description="Mostrá las relaciones con familiares y amigos que marcaron e influenciaron el desarrollo y crecimiento personal."
                 />
               </div>
-              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
                   title="SÍNTESIS GENÉTICA"
                   imgSrc={genetica1A}
@@ -249,7 +275,9 @@ export default function App() {
                   description="Dejá claro esos rasgos tradicionales que inevitablemente se heredan, que son parte de la identidad y que seguramente se transmitan a las siguientes generaciones."
                 />
               </div>
-              <div className="embla__slide flex-shrink-0 min-w-[300px]">
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="embla__slide flex-shrink-0 min-w-[100px]">
                 <Card
                   title="MUSEUM"
                   imgSrc={Museum1B}
@@ -257,11 +285,10 @@ export default function App() {
                   description="Que mejor que tener ese espacio propio donde encontrar todo de forma rápida y ágil, y mediante una experiencia visual increíble que se puede disfrutar a cada momento."
                 />
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
-        {/* Aquí podrías agregar controles personalizados (flechas, dots, etc.) si lo deseas */}
-      </section>
+      </div>
 
       <div className="bg-gris text-white text-2xl p-5 font-bold lg:pt-20">
         <h1>RESGUARDA DE FORMA SEGURA Y PERSONAL ESE TESORO</h1>

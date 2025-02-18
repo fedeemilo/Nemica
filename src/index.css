@@ -11,12 +11,28 @@
     --color-grisClaro: #E5E5E5;
     --color-grisMedio: #C0C1C2;
 }
-@keyframes scroll{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-50%);
-    }
 
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px; /* Coincide con el ancho de Card */
+  height: 500px; /* Coincide con la altura de Card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+  

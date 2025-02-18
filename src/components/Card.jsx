@@ -17,7 +17,7 @@ export default function Card({ title, imgSrc, description, h1 }) {
 
 
       {/* Contenedor de h1 y description */}
-      <section className="bg-gray-100 p-4 flex flex-col">
+      <section className="bg-white p-4 flex flex-col">
         <div className="text-purpura text-2xl text-left">
           <h1 className="font-semibold">{h1}</h1>
         </div>
