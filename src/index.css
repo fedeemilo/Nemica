@@ -11,7 +11,9 @@
     --color-grisClaro: #E5E5E5;
     --color-grisMedio: #C0C1C2;
 }
-
+.your-carousel-wrapper {
+  min-width: 0;
+}
 .MySwiper{
   width: 100%;
   max-width: 10px;
