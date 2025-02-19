@@ -5,6 +5,8 @@ module.exports = {
       "swiper-wrapper", 
       "swiper-slide", 
       "swiper-slide-active",
+      "your-carousel-wrapper",
+      "MySwiper",
     ],
   };
   
