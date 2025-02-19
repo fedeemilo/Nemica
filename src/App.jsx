@@ -187,8 +187,9 @@ export default function App() {
       <div className="font-bold text-2xl bg-lila p-5 border-lila text-white">
         <Line imgSrc={logo} description="NO OLVIDES TUS RAÍCES" />
       </div>
+
       <div className="py-10 bg-gradient-to-b from-lila to-gris">
-        <div className="max-w-[800px] lg:max-w-full mx-auto overflow-visible" >
+        <div className="carousel-container isolate w-full !max-w-[800px] mx-auto overflow-hidden" >
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -217,7 +218,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div >
+              <div>
                 <Card
                   title="HISTOGRAMA"
                   imgSrc={histograma1A}
