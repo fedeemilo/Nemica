@@ -6,4 +6,12 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/Nemica/',
   plugins: [react(), tailwindcss()],
-})
+  build:{
+   rollupOptions:{
+    output:{
+      inlineDynamicImports: true,
+    },
+   },
+  },
+});
+
