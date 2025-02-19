@@ -6,7 +6,7 @@ module.exports = {
       "swiper-slide", 
       "swiper-slide-active",
       "your-carousel-wrapper",
-      "MySwiper",
+      "mySwiper",
     ],
   };
   
