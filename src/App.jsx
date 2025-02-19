@@ -189,7 +189,7 @@ export default function App() {
       </div>
 
       <div className="py-10 bg-gradient-to-b from-lila to-gris">
-        <div className="carousel-container isolate w-full !max-w-[800px] mx-auto overflow-hidden" >
+        <div className="isolate !block !w-[800px] !mx-auto !overflow-hidden" >
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
