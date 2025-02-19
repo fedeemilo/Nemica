@@ -6,7 +6,8 @@ module.exports = {
       "swiper-slide", 
       "swiper-slide-active",
       "your-carousel-wrapper",
-      "myswiper",
+      "mySwiper",
+      "pagination",
     ],
   };
   

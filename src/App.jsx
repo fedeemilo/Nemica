@@ -207,7 +207,7 @@ export default function App() {
           >
 
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div>
                 <Card
                   title="RESUMEN BIOGRÁFICO"
                   imgSrc={bio1A}
@@ -217,7 +217,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div >
                 <Card
                   title="HISTOGRAMA"
                   imgSrc={histograma1A}
@@ -227,7 +227,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div>
                 <Card
                   title="CLIP DE VIDA"
                   imgSrc={clip2}
@@ -237,7 +237,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div>
                 <Card
                   title="ÁRBOL GENEALÓGICO"
                   imgSrc={genealogia1A}
@@ -247,7 +247,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div>
                 <Card
                   title="TESTIMONIOS"
                   imgSrc={testimonios}
@@ -257,7 +257,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div>
                 <Card
                   title="CIRCULO DE RELACIONES"
                   imgSrc={relaciones}
@@ -267,7 +267,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div>
                 <Card
                   title="SÍNTESIS GENÉTICA"
                   imgSrc={genetica1A}
@@ -277,7 +277,7 @@ export default function App() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="embla__slide flex-shrink-0 ">
+              <div>
                 <Card
                   title="MUSEUM"
                   imgSrc={Museum1B}
