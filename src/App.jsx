@@ -1,16 +1,13 @@
-
-
 //importacion de componentes
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
 import Line from "./components/Line";
-//import Card from "./components/Card";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Icons from "./components/Icons";
 import HeadingImage from "./components/HeadingImage";
-import Carousel from "./components/Carousel";
+import CarouselWrapper from "./components/CarouselWrapper";
 
 //import de estilos
 import "./index.css";
@@ -185,9 +182,9 @@ export default function App() {
         <Line imgSrc={logo} description="NO OLVIDES TUS RAÍCES" />
       </div>
 
-<div >
-  <Carousel/>
-</div>
+      <div className="w-screen h-screen">
+        <CarouselWrapper/>
+      </div>
 
       <div className="bg-gris text-white text-2xl p-5 font-bold lg:pt-20">
         <h1>RESGUARDA DE FORMA SEGURA Y PERSONAL ESE TESORO</h1>

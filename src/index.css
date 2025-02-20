@@ -13,10 +13,6 @@
 }
 body {
   margin: 0;
-  line-height: inherit;
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 [class^="number-slide"],
@@ -112,8 +108,8 @@ body {
 }
 .carousel__cell {
   position: absolute;
-  width: 240px;
+  width: 300px;
   left: 10px;
-  height: 200px;
+  height: 500px;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }

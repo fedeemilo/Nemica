@@ -1,10 +1,9 @@
 import React from "react";
-import "../index.css";
-import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "../index.css";
 
-
-const setupKeenSlider = (slider) => {
+const carousel = (slider) => {
   const z = 300;
   function rotate() {
     const deg = 360 * slider.track.details.progress;
@@ -20,15 +19,15 @@ const setupKeenSlider = (slider) => {
   slider.on("detailsChanged", rotate);
 };
 
-export default function Carousel() {
+const CarouselWrapper = () => {
   const [sliderRef] = useKeenSlider(
     {
       loop: true,
       selector: ".carousel__cell",
-      renderMode: "precision",
+      renderMode: "custom",
       mode: "free-snap",
     },
-    [setupKeenSlider]
+    [carousel]
   );
 
   return (
@@ -45,4 +44,6 @@ export default function Carousel() {
       </div>
     </div>
   );
-}
+};
+
+export default CarouselWrapper;
