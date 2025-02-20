@@ -1,19 +1,16 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+
 
 //importacion de componentes
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
 import Line from "./components/Line";
-import Card from "./components/Card";
+//import Card from "./components/Card";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Icons from "./components/Icons";
 import HeadingImage from "./components/HeadingImage";
+import Carousel from "./components/Carousel";
 
 //import de estilos
 import "./index.css";
@@ -53,14 +50,14 @@ import seven from "./assets/images/icons/7.png";
 import eight from "./assets/images/icons/8.png";
 
 //import Card
-import bio1A from "./assets/images/cards/Bio1A.jpg";
-import histograma1A from "./assets/images/cards/histograma1A.webp";
-import clip2 from "./assets/images/cards/Clip2.webp";
-import genealogia1A from "./assets/images/cards/Genealogia1A.webp";
-import testimonios from "./assets/images/cards/Testimonios.webp";
-import relaciones from "./assets/images/cards/Relaciones.webp";
-import genetica1A from "./assets/images/cards/genetica1A.webp";
-import Museum1B from "./assets/images/cards/Museum1B.webp";
+//import bio1A from "./assets/images/cards/Bio1A.jpg";
+//import histograma1A from "./assets/images/cards/histograma1A.webp";
+//import clip2 from "./assets/images/cards/Clip2.webp";
+//import genealogia1A from "./assets/images/cards/Genealogia1A.webp";
+//import testimonios from "./assets/images/cards/Testimonios.webp";
+//import relaciones from "./assets/images/cards/Relaciones.webp";
+//import genetica1A from "./assets/images/cards/genetica1A.webp";
+//import Museum1B from "./assets/images/cards/Museum1B.webp";
 
 export default function App() {
   return (
@@ -188,108 +185,9 @@ export default function App() {
         <Line imgSrc={logo} description="NO OLVIDES TUS RAÍCES" />
       </div>
 
-      <div className="py-10 bg-gradient-to-b from-lila to-gris">
-        <div className="isolate !block !w-[800px] !mx-auto !overflow-hidden" >
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination]}
-            className="mySwiper"
-          >
-
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="RESUMEN BIOGRÁFICO"
-                  imgSrc={bio1A}
-                  h1="¡El Pergamino de vida!"
-                  description="Recorre, describí y sintetiza la trayectoria, expresando el significado que tuvo para que nuevas y futuras generaciones tengan algo valioso guardado para siempre."
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="HISTOGRAMA"
-                  imgSrc={histograma1A}
-                  h1="¡Los hechos más significativos!"
-                  description="Destacá los hitos más importantes que marcaron el camino construido, y mira cronológicamente esos logros y eventos del proyecto de vida que fueron únicos."
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="CLIP DE VIDA"
-                  imgSrc={clip2}
-                  h1="¡Esos buenos momentos vividos!"
-                  description="Transmití esas experiencias que llenaron el corazón, que son vivencias que emocionan y que reviven momentos que entusiasman."
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="ÁRBOL GENEALÓGICO"
-                  imgSrc={genealogia1A}
-                  h1="¡De generación en generación!"
-                  description="Armá la línea familiar, para conocer los protagonistas de una generación a otra y descubrir en la transmisión de esa herencia del pasado, tradiciones arraigadas que dan muchas veces sentido al hoy y al mañana."
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="TESTIMONIOS"
-                  imgSrc={testimonios}
-                  h1="¡Esos relatos que nos pintan tal cual somos!"
-                  description="Recreá y captá desde la mirada y experiencia del círculo íntimo esa esencia personal, generando un retrato con los rasgos característicos."
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="CIRCULO DE RELACIONES"
-                  imgSrc={relaciones}
-                  h1="¡Esos vínculos construidos!"
-                  description="Mostrá las relaciones con familiares y amigos que marcaron e influenciaron el desarrollo y crecimiento personal."
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="SÍNTESIS GENÉTICA"
-                  imgSrc={genetica1A}
-                  h1="¡De tal palo tal astilla!"
-                  description="Dejá claro esos rasgos tradicionales que inevitablemente se heredan, que son parte de la identidad y que seguramente se transmitan a las siguientes generaciones."
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <Card
-                  title="MUSEUM"
-                  imgSrc={Museum1B}
-                  h1="¡Olvidate del altillo!"
-                  description="Que mejor que tener ese espacio propio donde encontrar todo de forma rápida y ágil, y mediante una experiencia visual increíble que se puede disfrutar a cada momento."
-                />
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </div>
+<div >
+  <Carousel/>
+</div>
 
       <div className="bg-gris text-white text-2xl p-5 font-bold lg:pt-20">
         <h1>RESGUARDA DE FORMA SEGURA Y PERSONAL ESE TESORO</h1>
